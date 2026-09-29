@@ -1,0 +1,15 @@
+<!DOCTYPE htm> * Aquí falta la l de html
+<html lan=es> * Aquí falta el fallo esta en que seria lang="es"
+<head> *Aquí falta contenido de meta charset
+<title>Página de contacto * Aquí falta el cierre que seria </title>
+</head>
+<body>
+<h1>Contacto<h1> *Aquí falta el cierre </h1>
+<p>Escríbenos a <b>info@instituto.es</p></b> * Aquí debería estar primero el cierre </b>
+<p>Horario de atención: Lunes a Viernes, 9:00 - 14:00 *Aquí Falta en cierre </p>
+<ul>
+<li>Teléfono *Falta cierre
+<li>Email * Falta cierre
+</ul>
+</body>
+</html>
