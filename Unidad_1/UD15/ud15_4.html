@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 4 - Tabla de datos completa</title>
+<style>
+     table {
+    border-spacing: 10px
+}
+    th,td {
+     border: 10px solid black;
+     padding: 10px;
+    }
+    caption{
+        caption-side: bottom;
+    }
+    tbody{
+        vertical-align: auto;
+    }
+
+</style>
+</head>
+<body>
+    <table><caption>Inventario de hardaware de redes - 2026</caption>
+        <thead><!--columnas-->
+            <tr>
+                <th>Categoria</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio Unitario</th>
+                <th>Notas / Descuento</th>
+            </tr>
+        </thead>
+
+        <tbody><!--filas-->
+            <tr> <td rowspan="2" class="categoria">Seguridad</td>
+                <td>Firewall Hardare</td>
+                <td>2</td>
+                <td>450</td>
+                <td>Urgente</td>
+            </tr>
+            <tr>
+                <td>Llave USB Cifrada</td>
+                <td>10</td>
+                <td>35</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="3" class="categoria">Redes</td>
+                <td>Switch Gestionable 24p</td>
+                <td>5</td>
+                <td>150</td>
+                <td>40%</td>
+            </tr>
+
+        </tbody>
+
+ </body>
