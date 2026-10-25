@@ -1,0 +1,18 @@
+* {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: red;
+  text-align: center;
+  font-size: 30px;
+}
+
+h2 {
+  color: blueviolet;
+}
+
+p {
+  color: brown;
+  text-align: justify;
+}
