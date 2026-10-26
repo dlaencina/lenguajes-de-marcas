@@ -1,0 +1,5 @@
+/* Diferencia: con outside las líneas largas se alinean con el texto;
+   con inside la segunda línea empieza debajo del icono. */
+ul {
+    list-style: url(img/check.png) square outside;
+}

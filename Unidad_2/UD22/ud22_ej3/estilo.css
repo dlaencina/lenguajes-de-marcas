@@ -1,0 +1,31 @@
+
+body {
+    font-family: Verdana, sans-serif;
+}
+
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+
+li {border: 2px solid #0f2540;
+    background-color: #1e3a5f;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 999px;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+li:hover {
+    background-color: #2f6fb0;
+}
