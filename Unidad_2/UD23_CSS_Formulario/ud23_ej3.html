@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FORMULARIO</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <h1>Formulario de alta de usuario</h1>
     <form action="#" method="post">
         <table>
-            <tr>
-                <td colspan="2">
+            <tr> <!--fila-->
+                <td colspan="2"><!--columna-->
                     <label for="username">Identificador del nuevo usuario:</label> 
                     <input type="text" name="identificador" id="username" size="20" value="*usu_012345" readonly>
                 </td>
@@ -23,6 +24,82 @@
                 <td>
                     <label for="name">Apellido:</label>
                     <input type="text" name="nombre" id="apellido" size="20"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="pswd">Contraseña:</label>
+                    <input type="password" name="contraseña" id="paswd" size="20"></input>
+                </td>
+                <td>
+                    <label for="cpswd">Confirmar contraseña:</label>
+                    <input type="password" name="confirmar" id="cpswd" size="20">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="mail">Email:</labe>
+                    <input type="text" name="email" id="mail" size="20">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Sexo:</label>
+                </td>
+                <td>
+                    <label for="sexo1">Hombre</label>
+                    <input type="radio" name="sexo" id="sexo1" size="20">
+                    <label for="sexo2">Mujer</label>
+                    <input type="radio" name="sexo" id="sexo2" size="20">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Aficiones:</label>
+                </td>
+                <td>
+                    <label for="deportes">Deportes</label>
+                    <input type="checkbox" id="deportes" size="20"><br>
+                    <label for="lectura">Lectura</label>
+                    <input type="checkbox" id="lectura" size="20"><br>
+                    <label for="cine">Cine</label>
+                    <input type="checkbox" id="cine" size="20">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="pais">País:</label>
+                </td>
+                <td>
+                    <select name="pais" id="pais" title="Selecciona tu país">
+                        <option value="espana" selected>España</option>
+                        <option value="francia">Francia</option>
+                        <option value="portugal">Portugal</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="foto">Subir su foto:</label>
+                </td>
+                <td>
+                    <input type="file" name="foto" id="foto" accept="image/*" title="Sube una foto tuya">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="comentario">Comentarios personales:</label>
+                </td>
+                <td>
+                    <textarea name="comentarios" id="comentarios" cols="40" rows="5" placeholder="Escriba aquí sus comentarios" title="Escribe lo que quieras contarnos"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td class="centrado">
+                    <input type="reset" value="Resetear" title="Borra todo lo escrito y vuelve a los valores iniciales">
+                </td>
+                <td class="centrado">
+                    <input type="submit" value="Enviar" title="Envía el formulario">
                 </td>
             </tr>
         </table>
