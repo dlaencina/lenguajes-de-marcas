@@ -1,0 +1,66 @@
+body {
+    background-color: darksalmon;
+    font-family: "Times New Roman", serif;
+    padding: 10px 20px;
+}
+
+table {
+    width: 100%;
+    border: 2px solid white;
+}
+
+td {
+    border: 2px solid white;
+    padding: 5px 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    font-weight: normal;
+}
+
+.centrado {
+    text-align: center;
+}
+
+/* ===================================================
+   PSEUDOCLASES (ejercicio UD3.2)
+   =================================================== */
+
+/* :focus → el campo donde está el cursor cambia de fondo */
+input:focus,
+textarea:focus,
+select:focus {
+    background-color: lightyellow;
+}
+
+/* :hover + :focus a la vez → con el cursor dentro Y el ratón encima */
+input:hover:focus {
+    background-color: lightgreen;
+}
+
+/* :required → borde izquierdo rojo en los campos obligatorios */
+input:required {
+    border-left: 4px solid red;
+}
+
+/* :read-only → identificador en gris */
+#identificador:read-only {
+    background-color: lightgray;
+    color: gray;
+}
+
+/* :disabled → código promocional atenuado */
+input:disabled {
+    opacity: 0.5;
+}
+
+/* :checked + label → texto de la opción marcada en negrita y verde */
+input:checked + label {
+    font-weight: bold;
+    color: green;
+}

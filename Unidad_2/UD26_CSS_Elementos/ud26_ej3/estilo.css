@@ -1,0 +1,62 @@
+/* ===== ::first-letter → primera letra de cada párrafo ===== */
+p::first-letter {
+    font-size: 2.5em;           /* 2,5 veces el tamaño normal */
+    color: crimson;
+    font-weight: bold;
+}
+
+/* ===== ::first-line → primera línea de cada párrafo ===== */
+p::first-line {
+    font-variant: small-caps;   /* versalitas: mayúsculas de tamaño pequeño */
+}
+
+/* ===== ::selection → texto seleccionado con el ratón ===== */
+::selection {
+    background-color: gold;
+    color: black;
+}
+
+/* ===== ::before en la lista → símbolo delante de cada elemento ===== */
+ul {
+    list-style: none;           /* primero quitamos la viñeta */
+}
+
+li::before {
+    content: "✔ ";              /* lo que se inserta antes del texto */
+    color: green;
+}
+
+/* ===== ::after en enlaces con target="_blank" → flecha detrás ===== */
+a[target="_blank"]::after {     /* selector de atributo + pseudoelemento */
+    content: " ↗";
+}
+
+/* ===== ::after en los h2 → barrita decorativa debajo ===== */
+h2::after {
+    content: "";                /* vacío, pero obligatorio para que exista */
+    display: block;             /* en su propia línea, debajo del título */
+    width: 60px;
+    height: 4px;
+    background-color: crimson;
+    margin-top: 5px;            /* separación con el texto del título */
+}
+
+/* ===== Reto: tooltip ===== */
+[data-ayuda] {
+    position: relative;         /* referencia para colocar la burbuja */
+    border-bottom: 1px dotted black;  /* subrayado de puntos para indicar que tiene ayuda */
+    cursor: help;               /* el cursor cambia a una interrogación */
+}
+
+[data-ayuda]:hover::after {     /* pseudoclase + pseudoelemento: solo aparece con el ratón encima */
+    content: attr(data-ayuda);  /* coge el texto del atributo data-ayuda */
+    position: absolute;         /* se coloca respecto a la palabra */
+    bottom: 100%;               /* justo encima de la palabra */
+    left: 0;
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;        /* que el texto no se parta en varias líneas */
+    font-size: 0.85em;
+}
