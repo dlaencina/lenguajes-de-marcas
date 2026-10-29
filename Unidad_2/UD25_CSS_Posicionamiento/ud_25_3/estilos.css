@@ -1,0 +1,22 @@
+.tarjeta {
+    width: 300px;                       /* ancho de la tarjeta */
+    border: 2px solid black;            /* borde: grosor, tipo y color */
+    border-radius: 10px;                /* esquinas redondeadas */
+    padding: 15px;                      /* espacio entre el borde y el contenido (por dentro) */
+    margin: 30px;                       /* espacio alrededor (por fuera), para que la etiqueta tenga sitio */
+    position: relative;                 /* la convierte en la referencia de la etiqueta (padre relative) */
+}
+
+.foto {
+    height: 150px;                      /* alto del recuadro, que hace de foto */
+    background-color: lightsteelblue;   /* color del recuadro */
+}
+
+.etiqueta {
+    background-color: red;              /* fondo rojo de la etiqueta */
+    color: white;                       /* texto blanco */
+    padding: 5px 10px;                  /* 5px arriba y abajo, 10px a los lados (por dentro) */
+    position: absolute;                 /* se coloca respecto a la tarjeta y sale del flujo */
+    top: -10px;                         /* 10px por encima del borde superior: sobresale */
+    right: -10px;                       /* 10px por fuera del borde derecho: sobresale */
+}

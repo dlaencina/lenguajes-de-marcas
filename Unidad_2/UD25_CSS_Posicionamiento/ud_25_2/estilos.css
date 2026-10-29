@@ -1,0 +1,19 @@
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #1e3a5f;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
