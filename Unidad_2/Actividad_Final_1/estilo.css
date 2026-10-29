@@ -1,0 +1,142 @@
+/* ===== Fuente Nunito (siempre en la primera línea del CSS) ===== */
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,700");
+
+/* ===== General ===== */
+body {
+    font-family: "Nunito", sans-serif;      /* fuente importada, con respaldo genérico */
+    margin: 5px;
+}
+
+/* ===== CABECERA ===== */
+header {
+    background-color: #eee;
+    text-align: center;                     /* centra los títulos */
+    position: relative;                     /* referencia para colocar los logos */
+    padding: 10px;
+    margin-bottom: 8px;                     /* hueco blanco con el menú */
+}
+
+header h1 {
+    color: maroon;                          /* granate */
+    font-size: 48px;
+    margin: 10px 0 0;
+}
+
+header h2 {
+    color: darkgreen;
+    font-size: 32px;
+    margin: 5px 0 15px;
+}
+
+.logo {
+    width: 110px;
+    position: absolute;                     /* sale del flujo y se coloca respecto al header */
+    top: 15px;
+}
+
+.izquierda { left: 30px; }                  /* logo HTML5 a la izquierda */
+.derecha   { right: 30px; }                 /* logo CSS3 a la derecha */
+
+/* ===== MENÚ ===== */
+nav {
+    background-color: #eee;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+nav ul {
+    list-style: none;                       /* sin viñetas */
+    margin: 0;
+    padding: 5px;
+}
+
+nav li {
+    display: inline-block;                  /* opciones en fila */
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;                  /* sin subrayado */
+    padding: 2px 4px;
+    border-top: 2px solid transparent;      /* borde invisible: así no "salta" al aparecer el rojo */
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {                               /* ratón encima: rojo con borde arriba y abajo */
+    color: red;
+    border-top-color: red;
+    border-bottom-color: red;
+}
+
+/* ===== REDES SOCIALES ===== */
+article {
+    display: inline-block;                  /* tarjetas en fila (lo pide el enunciado) */
+    width: 32.8%;                           /* 3 por fila, dejando sitio para los huecos */
+    height: 250px;
+    vertical-align: top;                    /* todas alineadas por arriba */
+    box-sizing: border-box;                 /* el padding cuenta dentro del width */
+    padding: 10px;
+    margin-bottom: 4px;
+}
+
+/* Un color para cada article con nth-child */
+article:nth-child(1) { background-color: rgba(162, 179, 188, 0.5); }  /* Facebook */
+article:nth-child(2) { background-color: rgba(241, 151, 79, 0.5); }   /* Twitter */
+article:nth-child(3) { background-color: rgba(208, 61, 107, 0.5); }   /* YouTube */
+article:nth-child(4) { background-color: rgba(195, 23, 65, 0.5); }    /* LinkedIn */
+article:nth-child(5) { background-color: rgba(109, 104, 166, 0.5); }  /* Instagram */
+article:nth-child(6) { background-color: rgba(156, 154, 203, 0.5); }  /* Pinterest */
+
+article img {
+    width: 70px;
+    float: left;                            /* el logo a la izquierda, el texto a su derecha */
+}
+
+.texto {
+    margin-left: 80px;                      /* deja sitio al logo: el texto no se mete debajo */
+    padding-right: 40px;
+}
+
+.texto h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.texto p {
+    font-size: 15px;
+    line-height: 1.5;                       /* separación entre líneas */
+}
+
+/* ===== Efecto zoom en todas las imágenes de redes ===== */
+article img,
+footer img {
+    transition: transform 0.3s;             /* el cambio de tamaño dura 0,3 segundos (animado) */
+}
+
+article img:hover,
+footer img:hover {
+    transform: scale(1.2);                  /* un 20% más grande */
+}
+
+/* ===== PIE ===== */
+footer {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.iconos {
+    background-color: #eee;
+    padding: 5px;
+}
+
+.iconos img {
+    width: 48px;
+}
+
+.copyright {
+    background-color: #eee;
+    font-size: 12px;
+    text-transform: uppercase;              /* todo en mayúsculas, como en la imagen */
+    margin: 6px 0 0;
+    padding: 3px;
+}
