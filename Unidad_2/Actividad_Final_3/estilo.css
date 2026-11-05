@@ -1,0 +1,172 @@
+/* ===== Base: tema oscuro ===== */
+body {
+    margin: 0;                        /* quita el margen blanco que pone el navegador */
+    background-color: #12121a;        /* fondo casi negro */
+    color: #eeeeee;                   /* texto claro */
+    font-family: Arial, sans-serif;   /* fuente sans-serif con respaldo */
+}
+
+/* ===== 1. Menú lateral → fixed ===== */
+nav {
+    position: fixed;                  /* pegado a la ventana, no se mueve con el scroll */
+    top: 0;                           /* desde arriba del todo… */
+    bottom: 0;                        /* …hasta abajo del todo = toda la altura */
+    left: 0;                          /* pegado a la izquierda */
+    width: 200px;
+    background-color: #0b0b10;        /* algo más oscuro que la página */
+    padding: 20px;
+    box-sizing: border-box;           /* el padding cuenta dentro de los 200px */
+}
+
+main {
+    margin-left: 200px;               /* deja libre el sitio del menú: así no queda tapado */
+}
+
+.logo {
+    color: #ff4f81;                   /* rosa de acento */
+    font-weight: bold;
+    letter-spacing: 4px;              /* separa las letras */
+}
+
+nav ul {
+    list-style: none;                 /* sin viñetas */
+    margin: 30px 0 0;
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 22px;              /* separación entre enlaces */
+}
+
+nav a {
+    color: #eeeeee;
+    text-decoration: none;            /* sin subrayado */
+}
+
+nav a:hover {
+    color: #38e1d0;                   /* cambia de color al pasar el ratón */
+}
+
+/* ===== 2. Portada → relative + absolute ===== */
+header {
+    position: relative;               /* referencia para colocar .portada */
+    height: 300px;                    /* bloque de 300px de alto */
+    background-color: #2a1a4a;        /* morado oscuro */
+}
+
+.portada {
+    position: absolute;               /* se coloca respecto al header */
+    left: 30px;                       /* a 30px del borde izquierdo */
+    bottom: 30px;                     /* a 30px del borde inferior */
+}
+
+.portada h1 {
+    color: #38e1d0;                   /* turquesa */
+    font-size: 40px;
+    margin: 0 0 8px;                  /* sin margen arriba; 8px con el subtítulo */
+}
+
+.portada p {
+    margin: 0;                        /* quita el margen por defecto */
+}
+
+/* ===== Secciones ===== */
+section {
+    border-left: 2px solid #ff4f81;   /* línea rosa de la izquierda */
+    padding-bottom: 40px;             /* aire al final de cada sección */
+}
+
+/* ===== 3. Títulos de sección → sticky ===== */
+h2 {
+    position: sticky;
+    top: 0;                           /* se pega arriba del todo */
+    z-index: 10;                      /* por encima del contenido que pasa por debajo */
+    background-color: #12121a;        /* tapa el texto que pasa por detrás */
+    color: #38e1d0;
+    margin: 0;
+    padding: 20px 30px;
+    border-bottom: 2px solid #38e1d0; /* línea turquesa de debajo */
+}
+
+/* ===== 4. Línea de tiempo → ::before + relative/absolute ===== */
+.horario {
+    position: relative;               /* referencia de la línea */
+    list-style: none;
+    margin: 0;
+    padding: 20px 0 0 60px;           /* sitio a la izquierda para línea y puntos */
+}
+
+.horario::before {                    /* la línea vertical */
+    content: "";                      /* obligatorio en ::before */
+    position: absolute;
+    left: 39px;
+    top: 20px;
+    bottom: 0;
+    width: 2px;
+    background-color: #ff4f81;
+}
+
+.horario li {
+    position: relative;               /* referencia del punto de cada li */
+    margin-bottom: 24px;
+}
+
+.horario li::before {                 /* el punto de cada hora */
+    content: "";
+    position: absolute;
+    left: -27px;                      /* se sale del li hasta quedar centrado en la línea */
+    top: 3px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;               /* círculo */
+    background-color: #38e1d0;
+}
+
+.horario strong {
+    color: #ff4f81;
+    margin-right: 10px;               /* separa la hora del texto */
+}
+
+/* ===== 5. Artistas → píldoras con inline-block ===== */
+.cartel {
+    padding: 30px;
+}
+
+.cartel span {
+    display: inline-block;            /* en fila, salta de línea solo y acepta padding/margin */
+    padding: 10px 20px;
+    margin: 0 12px 12px 0;            /* separación a la derecha y por debajo */
+    border: 2px solid #ff4f81;
+    border-radius: 999px;             /* forma de píldora */
+}
+
+.cartel span:first-child {            /* la primera, destacada */
+    background-color: #ff4f81;
+    color: #12121a;
+    font-weight: bold;
+}
+
+/* ===== 6. Preguntas → caja con scroll ===== */
+.faq {
+    height: 170px;                    /* alto fijo: la caja no crece */
+    overflow: auto;                   /* barra de scroll solo si el contenido no cabe */
+    margin: 30px;                     /* separación con el borde de la sección */
+    padding: 0 18px;                  /* espacio interior a los lados */
+    border: 2px solid #38e1d0;        /* borde turquesa */
+    background-color: #1a1a28;        /* algo más claro que el fondo */
+}
+
+.faq strong {
+    color: #ffffff;                   /* la pregunta, en blanco puro para destacar */
+}
+
+/* ===== Pie → static ===== */
+footer {
+    position: static;                 /* el valor por defecto; lo escribo porque se piden los cinco */
+    background-color: #0b0b10;        /* oscuro, como el menú */
+    padding: 20px 30px;
+}
+
+footer p {
+    margin: 0;
+}
