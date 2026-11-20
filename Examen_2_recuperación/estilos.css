@@ -1,0 +1,247 @@
+body {
+    margin: 0;
+    background: #E9E5DC;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+nav {
+    position: fixed;               
+    z-index: 10;                   
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    background: #1F2A44;
+}
+
+.marca {
+    margin: 0;
+    padding: 28px 20px;
+    color: #E94F37;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    display: block;                
+    padding: 14px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover {                      
+    background: #3B4A73;
+}
+
+.contenido {
+    margin-left: 220px;
+    width: 800px;
+    background: #fff;
+}
+
+.portada {
+    background: linear-gradient(135deg, #1F2A44, #3B4A73);
+    color: #fff;
+    padding: 40px 24px;
+}
+
+.portada h1 {
+    margin: 0 0 8px;
+}
+
+.portada p {
+    margin: 0 0 6px;
+}
+
+section {
+    padding: 24px;
+}
+
+h2 {
+    color: #1F2A44;
+    margin-top: 0;
+}
+
+h2::before {
+    content: "▶ ";
+    color: #E94F37;
+}
+
+.cartel {
+    display: inline-block;
+    vertical-align: top;
+    width: 220px;                   
+    margin: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+    position: relative;            
+}
+
+.etiqueta {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    z-index: 5;
+    background: #E94F37;
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.foto {
+    position: relative;
+    height: 180px;
+    border-radius: 8px 8px 0 0;
+}
+
+.f1 {
+    background: linear-gradient(160deg, #3B4A73, #E94F37);
+}
+
+.f2 {
+    background: linear-gradient(160deg, #0F6E78, #A8DADC);
+}
+
+.f3 {
+    background: linear-gradient(160deg, #F4A261, #E9C46A);
+}
+
+.cartel h3 {
+    margin: 12px 14px 4px;
+}
+
+.cartel p {
+    margin: 0 14px 14px;
+    color: #555;
+}
+
+.sinopsis {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    padding: 10px;
+    background: rgba(31, 42, 68, .9);
+    color: #fff;
+    font-size: 14px;
+}
+
+.foto:hover .sinopsis {
+    display: block;
+}
+
+.tabla-scroll {
+    height: 220px;
+    overflow: auto;                
+    border: 1px solid #ccc;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #1F2A44;
+    color: #fff;
+    text-align: left;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+
+td {
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background: #F1EDE4;
+}
+
+.faq h3 {
+    margin: 0;
+    padding: 12px 16px;
+    background: #E6EBF5;
+    border-top: 2px solid #fff;
+    font-size: 16px;
+}
+
+.faq h3 a {
+    color: #1F2A44;
+    text-decoration: none;
+}
+
+.respuesta {
+    display: none;
+    margin: 0;
+}
+
+.faq:target .respuesta {
+    display: block;
+    padding: 12px 16px;
+}
+
+form p {
+    margin: 0 0 14px;
+}
+
+input,
+select,
+textarea {
+    padding: 6px;
+    border: 2px solid #999;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #E94F37;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background: #1F2A44;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+}
+
+footer {
+    background: #1F2A44;
+    color: #fff;
+    text-align: center;
+    padding: 14px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 160px;
+    background: #E94F37;
+}
+
+nav li:hover > .submenu {
+    display: block;
+}

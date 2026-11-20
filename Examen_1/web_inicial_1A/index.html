@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Librería La Página</title>
+  <link rel="stylesheet" href="correccion.css">
+</head>
+<body>
+  <div class="pagina">
+
+    <header>
+      <img src="img/logo.png" alt="Logo de Librería La Página" width="80">
+      <h1>Librería La Página</h1>
+      <p>Libros nuevos y de segunda mano</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#novedades">Novedades</a>
+          <ul class="submenu">
+            <li><a href="#novedades">Novelas</a></li>
+            <li><a href="#novedades">Cocina</a></li>
+            <li><a href="#novedades">Ciencia</a></li>
+          </ul>
+        </li>
+        <li><a href="#agenda">Agenda</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <section id="novedades">
+      <h2>Novedades</h2>
+      <article class="tarjeta">
+        <div class="foto"></div>
+        <h3>Los árboles de la ciudad</h3>
+        <p>Novela gráfica sobre el barrio y sus vecinos.</p>
+        <span class="precio" data-tip="IVA incluido">14 €</span>
+      </article>
+      <article class="tarjeta">
+        <div class="foto"></div>
+        <h3>Cocina de temporada</h3>
+        <p>Recetas sencillas con productos locales.</p>
+        <span class="precio" data-tip="IVA incluido">19 €</span>
+      </article>
+      <article class="tarjeta">
+        <div class="foto"></div>
+        <h3>Atlas del cielo nocturno</h3>
+        <p>Guía ilustrada para observar las estrellas.</p>
+        <span class="precio" data-tip="IVA incluido">22 €</span>
+      </article>
+    </section>
+
+    <section id="agenda">
+      <h2>Agenda de actividades</h2>
+      <div class="tabla-scroll">
+        <table>
+        <tr><th>Fecha</th><th>Actividad</th><th>Sala</th></tr>
+        <tr><td>2 nov</td><td>Club de lectura juvenil</td><td>Sala azul</td></tr>
+        <tr><td>5 nov</td><td>Presentación de «Cocina de temporada»</td><td>Sala principal</td></tr>
+        <tr><td>9 nov</td><td>Taller de ilustración</td><td>Sala azul</td></tr>
+        <tr><td>12 nov</td><td>Cuentacuentos infantil</td><td>Rincón infantil</td></tr>
+        <tr><td>16 nov</td><td>Club de lectura de misterio</td><td>Sala verde</td></tr>
+        <tr><td>19 nov</td><td>Encuentro con autores locales</td><td>Sala principal</td></tr>
+        <tr><td>23 nov</td><td>Intercambio de libros</td><td>Entrada</td></tr>
+        <tr><td>27 nov</td><td>Noche de poesía</td><td>Sala verde</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Escríbenos a hola@lapagina.example o pásate por la calle Mayor, 12.</p>
+    </section>
+
+    <footer>
+      <p>© 2026 · NOMBRE DEL ALUMNO/A · Examen 1A</p>
+    </footer>
+
+  </div>
+
+  <a class="flotante" href="#contacto">Contactar</a>
+</body>
+</html>

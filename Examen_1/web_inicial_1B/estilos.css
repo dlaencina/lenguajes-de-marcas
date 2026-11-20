@@ -1,0 +1,42 @@
+body { margin: 0; background: #F1F5F9; font-family: Arial, sans-serif; color: #2b2b2b; }
+
+.pagina { width: 960px; margin: 0 auto; background: #fff; }
+
+header { background: #1F4E79; color: #fff; text-align: center; padding: 24px 20px; }
+header h1 { margin: 8px 0 4px; color: #1F4E79; }
+header p { margin: 0; }
+
+nav { position: sticky; background: #1F4E79; border-top: 1px solid rgba(255,255,255,.3); }
+nav ul { margin: 0; padding: 0; list-style: none; text-align: center; }
+nav li { display: inline-block; }
+nav a { display: block; padding: 12px 18px; color: #fff; text-decoration: none; }
+nav a:hover { background: #D9622B; color: #D9622B; }
+
+section { padding: 24px; }
+h2 { color: #1F4E79; margin-top: 0; }
+h2::before { content: "✦ "; color: #D9622B; }
+
+.tarjeta { position: relative; display: inline-block; vertical-align: top; width: 304px; margin: 8px; padding-bottom: 84px; border: 1px solid #ccc; border-radius: 12px; background: #fff; }
+.foto { height: 110px; background: #1F4E79; opacity: .85; border-radius: 12px 12px 0 0; }
+.tarjeta h3 { margin: 12px 14px 4px; }
+.tarjeta p { margin: 0 14px; }
+.precio { position: absolute; top: 12px; left: 12px; width: 70px; height: 70px; border-radius: 50%; background: #D9622B; color: #222; text-align: center; line-height: 70px; font-weight: bold; }
+
+.tabla-scroll { height: 220px; overflow: auto; border: 1px solid #ccc; }
+table { width: 100%; border-collapse: collapse; }
+th { background: #1F4E79; color: #fff; text-align: left; padding: 10px; }
+.tabla-scroll th { position: sticky; }
+td { padding: 10px; }
+tr:nth-child(odd) { background: #DDE8F2; }
+
+form p { margin: 0 0 14px; }
+input, select, textarea { padding: 6px; border: 2px solid #999; }
+input:hover, select:hover, textarea:hover { border-color: #D9622B; outline: none; }
+button { padding: 10px 20px; background: #1F4E79; color: #fff; border: none; border-radius: 6px; }
+
+footer { background: #1F4E79; color: #fff; text-align: center; padding: 14px; }
+footer p { margin: 0; }
+
+.flotante { position: fixed; left: 20px; bottom: 20px; background: #D9622B; color: #222; padding: 12px 18px; border-radius: 24px; text-decoration: none; font-weight: bold; box-shadow: 0 2px 6px rgba(0,0,0,.3); }
+
+.submenu { display: none; }
