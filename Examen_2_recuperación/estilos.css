@@ -6,8 +6,8 @@ body {
 }
 
 nav {
-    position: fixed;               
-    z-index: 10;                   
+    position: fixed;               /* CORREGIDO 1 · «el menú lateral se va con el scroll» · era absolute */
+    z-index: 10;                   /* CORREGIDO 2 · «el contenido pasa por encima del menú» · faltaba z-index */
     top: 0;
     left: 0;
     width: 220px;
@@ -31,17 +31,17 @@ nav ul {
 }
 
 nav li {
-    position: relative;
+    position: relative;            /* CORREGIDO 10 · «submenú» · referencia del submenú */
 }
 
 nav a {
-    display: block;                
+    display: block;                /* CORREGIDO 3 · «el fondo del hover solo cubre el texto / los enlaces se amontonan» · faltaba display: block */
     padding: 14px 20px;
     color: #fff;
     text-decoration: none;
 }
 
-nav a:hover {                      
+nav a:hover {                      /* CORREGIDO 4 · «no cambia el fondo al pasar el ratón» · era ::hover (dos puntos); las pseudoclases llevan uno */
     background: #3B4A73;
 }
 
@@ -82,12 +82,12 @@ h2::before {
 .cartel {
     display: inline-block;
     vertical-align: top;
-    width: 220px;                   
+    width: 220px;                  /* CORREGIDO 5 · «la tercera tarjeta cae a otra fila» · era 250px: (250+2+16)×3 = 804 > 752 disponibles */
     margin: 8px;
     border: 1px solid #ccc;
     border-radius: 8px;
     background: #fff;
-    position: relative;            
+    position: relative;            /* CORREGIDO 6 · «las etiquetas se van a la esquina de la página» · el padre del absolute necesita relative */
 }
 
 .etiqueta {
@@ -103,7 +103,7 @@ h2::before {
 }
 
 .foto {
-    position: relative;
+    position: relative;            /* CORREGIDO 8 · «sinopsis» · referencia de la sinopsis */
     height: 180px;
     border-radius: 8px 8px 0 0;
 }
@@ -129,9 +129,9 @@ h2::before {
     color: #555;
 }
 
-.sinopsis {
-    display: none;
-    position: absolute;
+.sinopsis {                        /* CORREGIDO 8 · «sinopsis de la cartelera al pasar el ratón por la foto» */
+    display: none;                 /* oculta por defecto */
+    position: absolute;            /* encima de la foto, pegada abajo */
     bottom: 0;
     left: 0;
     width: 200px;
@@ -141,13 +141,13 @@ h2::before {
     font-size: 14px;
 }
 
-.foto:hover .sinopsis {
+.foto:hover .sinopsis {            /* CORREGIDO 8 · aparece al pasar el ratón */
     display: block;
 }
 
 .tabla-scroll {
     height: 220px;
-    overflow: auto;                
+    overflow: auto;                /* CORREGIDO 7 · «la tabla no hace scroll» · era hidden */
     border: 1px solid #ccc;
 }
 
@@ -191,7 +191,7 @@ tr:nth-child(even) {
     margin: 0;
 }
 
-.faq:target .respuesta {
+.faq:target .respuesta {           /* CORREGIDO 9 · «al hacer clic en la pregunta se ve la respuesta» · :target = el elemento al que apunta el enlace #id */
     display: block;
     padding: 12px 16px;
 }
@@ -234,14 +234,14 @@ footer p {
 }
 
 .submenu {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 100%;
+    display: none;                 /* oculto por defecto */
+    position: absolute;            /* CORREGIDO 10 · fuera del flujo, no empuja el menú */
+    top: 0;                        /* CORREGIDO 10 · a la altura de su opción */
+    left: 100%;                    /* CORREGIDO 10 · se abre a la derecha (el menú es vertical) */
     min-width: 160px;
     background: #E94F37;
 }
 
-nav li:hover > .submenu {
+nav li:hover > .submenu {          /* CORREGIDO 10 · era «nav ul:hover .submenu» y abría todos; ahora solo el del li con el ratón */
     display: block;
 }
